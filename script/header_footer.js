@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body>
-    
-    <header>
+function generateHeader() {
+    const headerContent = `
         <div class="logo-container">
             <a href="index.html"><img class="sks-logo" src="images/sks_logo.jpg" alt="sks-logo"></a>
         </div>
         <nav class="nav-bar">
-          <a href="mens.html">Men</a>
+          <a href="#">Men</a>
           <a href="#">Kids</a>
           <a href="#">Accessories</a>
           <a href="#">Shoes</a>
@@ -41,39 +30,16 @@
                 <span class="action-name">bag</span>
                 <span class="bag-item-count">0</span> 
             </a>
-        </div>
+        </div>`;
 
-    </header>
+document.querySelector(".header-container").innerHTML = headerContent;
+}
 
-    <main>
-       <div class="banner-container">
-        <img class="banner-image" src="images/banner_sks.png" alt="banner-image">
-    </div>
+// Function to generate the footer content
+function generateFooter() {
+const footerContent = `
 
-    <div class="category-container">Discover Your New Favorite Outfit Today</div>
-    <div class="category-items">
-        <a href="#"><img class="img-items" src="images/offers/1.png"></a>
-        <a href="#"><img class="img-items" src="images/offers/2.png"></a>
-        <a href="#"><img class="img-items" src="images/offers/9.png"></a>
-        <a href="#"><img class="img-items" src="images/offers/4.png"></a>
-        <a href="#"><img class="img-items" src="images/offers/3.png"></a>
-        <a href="#"><img class="img-items" src="images/offers/10.png"></a>
-    </div>
-
-    <div class="category-container">shop by category</div>
-    <div class="category-items">
-        <a href="#"><img class="img-items" src="images/category/1.jpg"></a>
-        <a href="#"><img class="img-items" src="images/category/3.jpg"></a>
-        <a href="#"><img class="img-items" src="images/category/4.jpg"></a>
-        <a href="#"><img class="img-items" src="images/category/6.jpg"></a>
-        <a href="#"><img class="img-items" src="images/category/7.jpg"></a>
-        <a href="#"><img class="img-items" src="images/category/10.jpg"></a>
-    </div>
-    </main>
-
-  
-        <footer>
-            <div class="footer-panel1">
+<div class="footer-panel1">
                 Back to Top
             </div>
             <div class="footer-panel2">
@@ -130,8 +96,14 @@
                     © 1996-2025, SKS.com, Inc. or its affiliates
                 </div>
             </div>
-        </footer>
-   
+`;
 
-</body>
-</html>
+// Insert the footer content into the footer-placeholder div
+document.querySelector(".footer-container").innerHTML = footerContent;
+}
+
+// Call the functions to generate and insert header and footer when the page loads
+window.onload = function() {
+generateHeader();
+generateFooter();
+};
